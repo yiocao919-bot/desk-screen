@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>桌面屏</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="桌面屏">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0d1117">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFPUlEQVR4nO3dMbLbNhSFYTiTNkWKjCvXLtx5D16Gd5BdeRneg7sUrr0RF8hwNHo6FEgRuOcC/1dmknnk5W+A1HPEd3/9/b4Aj/wRfQDwRRyQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAMScUAiDkjEAYk4IBEHJOKARByQiAPSn9EHEObHfz/b/+XPnz72OxJb7xb5H6kPpdBihVxmjuPyIJRZQ5kwjmFNvDVZJfPEEdjEW3NUMkMcVlncyp5I7jhss7iVN5GscbyexaFrNvjHmcgXx+nrdOHlcTiGAZLFcfSqDLgYhod0lTRx+H+g6X+ER+WIo33u4UNPdKhPucfROGvDQec98o11HC3zdR5uSX4Kvr+yTz3WTcsR2n5a47hyzJHFnYwnZRfH0yG6TfCQXGfnta3kmt0JT4/faosximP6MqpEfbhsK/sTmSOLO/6nbLFy+I+ph/3zclg/4uNYs4zKvA/rv30+pgx1Dcb89M+fPoZHoASvHDtzmXvNuLVzprHdRMZBGRvPPsLioIw7hn3E35DeWbOMyu3cY+KIvQd0piYQsngExGF7c25u/NyMthWWjcpnDqPjYENpYbK5DI2DMto59GG0rcDNuDhYNo4KXzxYOSANioNl45zYxSNy5aCMFoFTGhEHn3r1MGCqYSsHy0a7qFl1j4Nlo5/es+VpBVJMHOwpR4VMrG8c7Cm9dZ1wwMrBsnHO+LlxzwGpYxzsKWP0m/PolYM95RWDp8e2Aok4IPWKgxuOkTpNe+jKwQ3H60bOkG0FEnFAIg5IxAGpSxwPb565G73Kw0n2eGBh5YBEHJCIQ+JzvNXj2C9g8T6WjqPl2q/cx9JxYB9xPPfr25df375EH0UA6y+ptbL18eHr99gjGYaV47B1FpKl42j50PafH/8+/OcrJLJ0HOVZH6qMzdyJrB5H0X08LWMzayLEUcqjPtrL2MyXCE8r/3u4fpy42PU/meOJptdrvCb7rf3pJaFHJcNmy7bS5MPX7+cuc+q9hjgOWC0R4jhsnUSI46TTiSRi8d3neR1N5PWeZvju87wPJieEryKdps3nHJfZ+lA3Fum2Ie45rhe+kFzF5WU887lL5JJc5nkZz1K3HcqAVaTfnNlWRki6y/B2yDRmezskO0tvXSfs9dJhKKu8dBhZdI+DnaWf3rMNWznYWdpFzWpEHCwePQyYauQ9B4tHi8ApDYoj/P25ScW+cpWnFUjj4mDxOCr8Tc2sHJAsvvucxeOt8GWj+LyMhz5uOZRRrLYV+qh85sDbIdNY5e2QbC6KyYZSGW0r1cp9uJ17WBw7fxTcZjTGzllHbcSRKwd9bAzLKOHbCn0U1zJKeBz7VujD+Rzj49j/w+E8u9ftn134M398HGXVPszLKP2+E+yEpxE4zOsSWc7UYuWonk5kjiUkSxnFKo6yQB+JyihW28qmpQCrIbbIeFKOcVQZp/lQ3hPx2lZutczLf5fJW0ZxXjmqxstvON+8R75xj6NqXyHCZ53oUJ/KEUc5uIOEzN3/CI9KE0d19CZjwDUwPKSrJIujvHATeuFVcTiGAfLFUb3+nHLoOg3+cSayxlH5P8qWnFlUueOobBPJm0U1QxyVVSLZs6jmiWMTWMkcTWwmjGMzrJLJmtjMHMety0OZNYhbq8Tx1nwfaF5u3TjwlO+v7BGOOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCARByTigEQckIgDEnFAIg5IxAGJOCD9BrWvCQSyZV6uAAAAAElFTkSuQmCC">
+<style>
+/* 布局：横屏 667x375 为基准（iPhone 8）。1rem = 10px，随屏幕等比缩放。
+   左：时钟+天气；中：月历；右：待办；底部：三张 AI 额度卡片。 */
+:root{
+  --bg:#0d1117;
+  --panel:#151b23;
+  --line:#232b36;
+  --fg:#e8eef4;
+  --dim:#8b98a7;
+  --faint:#566272;
+  --accent:#8fc1e8;
+  --warm:#f0b45c;
+  --bad:#ef7a6c;
+  --good:#7cc8a0;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:min(1.5vw,2.667vh);height:100%;background:var(--bg)}
+body{margin:0;height:100%;background:var(--bg);color:var(--fg);
+  font-family:-apple-system,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  -webkit-user-select:none;user-select:none;overflow:hidden;font-variant-numeric:tabular-nums;
+  -webkit-text-size-adjust:100%}
+body.night #app{filter:brightness(.5)}
+#app{height:100%;display:grid;grid-template-rows:minmax(0,1fr) 6.8rem;gap:.8rem;
+  padding:1.1rem 1.3rem;padding-left:max(1.3rem,env(safe-area-inset-left));padding-right:max(1.3rem,env(safe-area-inset-right));
+  transition:transform 3s ease, filter 2s ease}
+.main{display:grid;grid-template-columns:1.12fr 1fr 1fr;gap:1rem;min-height:0}
+.card{background:var(--panel);border-radius:1rem;padding:.9rem 1rem;min-height:0;min-width:0}
+
+/* 左栏 */
+.hero{display:flex;flex-direction:column;min-width:0;min-height:0}
+.time{display:flex;align-items:baseline;gap:.5rem;line-height:1;white-space:nowrap}
+.time .hm{font-size:7.2rem;font-weight:200;letter-spacing:-.25rem}
+.time .sec{font-size:2.2rem;font-weight:300;color:var(--faint)}
+.date{margin-top:.5rem;font-size:1.6rem;font-weight:500}
+.lunar{margin-top:.2rem;font-size:1.2rem;color:var(--dim)}
+.wx{margin-top:auto;border-top:1px solid var(--line);padding-top:.8rem;cursor:pointer}
+.wx-now{display:flex;align-items:center;gap:.8rem}
+.wx-ico{font-size:3.4rem;line-height:1}
+.wx-temp{font-size:3.8rem;font-weight:300;line-height:1}
+.wx-temp small{font-size:1.6rem;color:var(--dim);margin-left:.1rem}
+.wx-meta{white-space:nowrap;font-size:1.1rem;color:var(--dim);line-height:1.45;min-width:0}
+.wx-meta b{color:var(--fg);font-weight:500;font-size:1.3rem}
+.wx-days{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.7rem}
+.wx-day{text-align:center;font-size:1.05rem;color:var(--dim);line-height:1.35}
+.wx-day i{display:block;font-style:normal;font-size:1.7rem;line-height:1.2}
+.wx-day b{color:var(--fg);font-weight:500}
+.wx-msg{font-size:1.2rem;color:var(--warm)}
+
+/* 月历 */
+.cal{display:flex;flex-direction:column}
+.cal h2{margin:0 0 .5rem;font-size:1.35rem;font-weight:600;display:flex;justify-content:space-between;align-items:baseline}
+.cal h2 span{font-size:1.05rem;font-weight:400;color:var(--dim)}
+.grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:1fr;text-align:center}
+.grid .h{font-size:1rem;color:var(--faint);align-self:center}
+.grid .h.we{color:#6f8aa3}
+.d{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;border-radius:.7rem}
+.d b{font-size:1.45rem;font-weight:400}
+.d small{font-size:.82rem;color:var(--faint);margin-top:.1rem;white-space:nowrap}
+.d.we b{color:#9bb7d0}
+.d.new small{color:var(--warm)}
+.d.today{background:var(--accent)}
+.d.today b{color:#0d1117;font-weight:700}
+.d.today small{color:#26435c}
+
+/* 待办 */
+.todo{display:flex;flex-direction:column}
+.todo h2{margin:0 0 .5rem;font-size:1.35rem;font-weight:600;display:flex;justify-content:space-between;align-items:baseline}
+.todo h2 span{font-size:1.05rem;font-weight:400;color:var(--dim)}
+.list{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;margin:0;padding:0;list-style:none}
+.list li{display:flex;align-items:center;gap:.7rem;padding:.55rem 0;border-bottom:1px solid var(--line);font-size:1.35rem;line-height:1.25}
+.list li:last-child{border-bottom:0}
+.ck{flex:none;width:2.1rem;height:2.1rem;border-radius:50%;border:2px solid var(--faint);background:none;padding:0;color:transparent;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.list li.done .ck{background:var(--good);border-color:var(--good);color:#0d1117}
+.list li.done .tx{color:var(--faint);text-decoration:line-through}
+.tx{flex:1;min-width:0;word-break:break-all}
+.rm{flex:none;background:none;border:0;color:var(--faint);font-size:1.8rem;line-height:1;padding:.2rem .4rem}
+.empty{color:var(--faint);font-size:1.2rem;padding:1rem 0;text-align:center}
+.add{display:flex;gap:.5rem;margin-top:.6rem}
+.add input{flex:1;min-width:0;height:3rem;border-radius:.8rem;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:0 .8rem;font-size:16px;outline:none;-webkit-user-select:text;user-select:text}
+.add input:focus{border-color:var(--accent)}
+.add button{flex:none;width:3.6rem;height:3rem;border-radius:.8rem;border:0;background:var(--accent);color:#0d1117;font-size:2rem;line-height:1}
+
+/* AI 额度 */
+.ai{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;min-height:0}
+.q{display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;padding:.8rem 1rem}
+.q-top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+.q-name{font-size:1.3rem;font-weight:600;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
+.q-name i{width:.8rem;height:.8rem;border-radius:50%;display:inline-block}
+.q-name em{font-style:normal;font-size:.9rem;color:var(--faint);font-weight:400;border:1px solid var(--line);border-radius:.4rem;padding:0 .35rem}
+.q-left{font-size:2.3rem;font-weight:300;line-height:1}
+.q-left small{font-size:1.1rem;color:var(--dim)}
+.bar{height:.55rem;border-radius:.3rem;background:var(--line);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:.3rem;background:var(--good);transition:width .6s}
+.bar span.mid{background:var(--warm)}
+.bar span.low{background:var(--bad)}
+.q-note{font-size:1rem;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* 编辑弹层 */
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;justify-content:center;align-items:flex-start;padding-top:2rem;z-index:9}
+.mask[hidden]{display:none}
+.sheet{width:42rem;max-width:92vw;background:#1b232e;border-radius:1.4rem;padding:1.4rem}
+.sheet h3{margin:0 0 1rem;font-size:1.6rem}
+.row{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;font-size:1.3rem;color:var(--dim)}
+.row label{flex:none;width:7rem}
+.row input[type=range]{flex:1;min-width:0}
+.row input[type=number],.row input[type=text]{flex:1;min-width:0;height:3.2rem;border-radius:.8rem;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:0 .8rem;font-size:16px;-webkit-user-select:text;user-select:text}
+.row .val{flex:none;width:5rem;text-align:right;color:var(--fg);font-size:1.6rem}
+.btns{display:flex;gap:1rem;justify-content:flex-end;margin-top:1.2rem}
+.btns button{height:3.4rem;padding:0 2rem;border-radius:1rem;border:0;font-size:1.4rem;background:var(--line);color:var(--fg)}
+.btns button.pri{background:var(--accent);color:#0d1117;font-weight:600}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="main">
+    <section class="hero">
+      <div class="time"><span class="hm" id="hm">--:--</span><span class="sec" id="sec">--</span></div>
+      <div class="date" id="date"></div>
+      <div class="lunar" id="lunar"></div>
+      <div class="wx" id="wx"><div class="wx-msg">正在获取天气…</div></div>
+    </section>
+    <section class="card cal">
+      <h2><div id="calTitle"></div><span id="calSub"></span></h2>
+      <div class="grid" id="grid"></div>
+    </section>
+    <section class="card todo">
+      <h2>待办<span id="todoCount"></span></h2>
+      <ul class="list" id="list"></ul>
+      <form class="add" id="addForm" autocomplete="off">
+        <input id="addInput" type="text" placeholder="添加待办" enterkeyhint="done" maxlength="60">
+        <button type="submit" aria-label="添加">+</button>
+      </form>
+    </section>
+  </div>
+  <div class="ai" id="ai"></div>
+</div>
+
+<div class="mask" id="mask" hidden>
+  <form class="sheet" id="sheet">
+    <h3 id="shTitle"></h3>
+    <div class="row"><label for="shRange">已用</label><input id="shRange" type="range" min="0" max="100" step="1"><span class="val" id="shVal"></span></div>
+    <div class="row"><label for="shNote">备注</label><input id="shNote" type="text" placeholder="例如：周四 08:00 重置" maxlength="24"></div>
+    <div class="btns"><button type="button" id="shCancel">取消</button><button type="submit" class="pri">保存</button></div>
+  </form>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+function load(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def}catch(e){return def}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function pad(n){return n<10?"0"+n:""+n}
+
+/* ---------- 农历 ---------- */
+var CN_D=["初一","初二","初三","初四","初五","初六","初七","初八","初九","初十","十一","十二","十三","十四","十五","十六","十七","十八","十九","二十","廿一","廿二","廿三","廿四","廿五","廿六","廿七","廿八","廿九","三十"];
+var CN_M=["","正","二","三","四","五","六","七","八","九","十","冬","腊"];
+var lunarFmt=null,lunarFull=null;
+try{
+  lunarFmt=new Intl.DateTimeFormat("zh-u-ca-chinese",{month:"long",day:"numeric"});
+  lunarFull=new Intl.DateTimeFormat("zh-u-ca-chinese",{year:"numeric",month:"long",day:"numeric"});
+}catch(e){}
+function lunarParts(date,fmt){
+  if(!fmt)return null;
+  try{
+    var o={};fmt.formatToParts(date).forEach(function(p){o[p.type]=p.value});
+    var m=o.month||"",leap=/闰|bis/.test(m),mn=parseInt(m.replace(/\D/g,""),10);
+    var mt=isNaN(mn)?m.replace("闰",""):CN_M[mn];
+    mt=(leap?"闰":"")+mt.replace(/月$/,"")+"月";
+    var dn=parseInt(o.day,10);
+    return{month:mt,day:isNaN(dn)?o.day:CN_D[dn-1],isFirst:dn===1,year:o.yearName||""};
+  }catch(e){return null}
+}
+
+/* ---------- 时钟 ---------- */
+var WD=["日","一","二","三","四","五","六"];
+var lastDay="";
+function tick(){
+  var n=new Date();
+  $("hm").textContent=pad(n.getHours())+":"+pad(n.getMinutes());
+  $("sec").textContent=pad(n.getSeconds());
+  var key=n.getFullYear()+"-"+n.getMonth()+"-"+n.getDate();
+  if(key!==lastDay){lastDay=key;renderDate(n);renderCal(n)}
+  document.body.className=(n.getHours()>=23||n.getHours()<7)?"night":"";
+  if(n.getHours()===4&&n.getMinutes()===0&&n.getSeconds()===0&&navigator.onLine){location.reload()}
+}
+function renderDate(n){
+  $("date").textContent=(n.getMonth()+1)+"月"+n.getDate()+"日 星期"+WD[n.getDay()];
+  var l=lunarParts(n,lunarFull);
+  $("lunar").textContent=l?((l.year?l.year+"年 ":"")+l.month+l.day):"";
+}
+
+/* ---------- 月历 ---------- */
+function renderCal(n){
+  var y=n.getFullYear(),m=n.getMonth(),first=new Date(y,m,1);
+  var offset=(first.getDay()+6)%7,days=new Date(y,m+1,0).getDate();
+  $("calTitle").textContent=y+"年"+(m+1)+"月";
+  var h="";
+  ["一","二","三","四","五","六","日"].forEach(function(w,i){h+='<div class="h'+(i>4?" we":"")+'">'+w+'</div>'});
+  for(var i=0;i<offset;i++)h+="<div></div>";
+  for(var d=1;d<=days;d++){
+    var dt=new Date(y,m,d),col=(offset+d-1)%7,l=lunarParts(dt,lunarFmt);
+    var cls="d"+(col>4?" we":"")+(d===n.getDate()?" today":"")+(l&&l.isFirst?" new":"");
+    h+='<div class="'+cls+'"><b>'+d+'</b><small>'+(l?(l.isFirst?l.month:l.day):"")+'</small></div>';
+  }
+  $("grid").innerHTML=h;
+  var cnt=Math.ceil((offset+days)/7);
+  $("grid").style.gridTemplateRows="1.8rem repeat("+cnt+",1fr)";
+  var tm=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+  var jan=new Date(y,0,1),wk=Math.ceil(((tm-jan)/864e5+((jan.getDay()+6)%7)+1)/7);
+  $("calSub").textContent="第"+wk+"周";
+}
+
+/* ---------- 天气 ---------- */
+var WX={0:["晴","☀️"],1:["晴间多云","🌤"],2:["多云","⛅"],3:["阴","☁️"],45:["雾","🌫"],48:["雾凇","🌫"],
+51:["小毛毛雨","🌦"],53:["毛毛雨","🌦"],55:["大毛毛雨","🌦"],56:["冻毛毛雨","🌧"],57:["冻毛毛雨","🌧"],
+61:["小雨","🌧"],63:["中雨","🌧"],65:["大雨","🌧"],66:["冻雨","🌧"],67:["冻雨","🌧"],
+71:["小雪","❄️"],73:["中雪","❄️"],75:["大雪","❄️"],77:["雪粒","❄️"],
+80:["阵雨","🌦"],81:["强阵雨","🌧"],82:["暴雨","🌧"],85:["阵雪","❄️"],86:["大阵雪","❄️"],
+95:["雷暴","⛈"],96:["雷暴冰雹","⛈"],99:["强雷暴冰雹","⛈"]};
+function wx(c){return WX[c]||["--","·"]}
+var wxState=load("dc_wx",null);
+function wxMsg(t){$("wx").innerHTML='<div class="wx-msg">'+t+'</div>'}
+function renderWx(){
+  var s=wxState;if(!s||!s.cur){return}
+  var c=wx(s.cur.code),h='<div class="wx-now"><div class="wx-ico">'+c[1]+'</div>'
+   +'<div class="wx-temp">'+Math.round(s.cur.t)+'<small>°C</small></div>'
+   +'<div class="wx-meta"><b>'+c[0]+(s.city?" · "+s.city:"")+'</b><br>'
+   +'↑'+Math.round(s.days[0].max)+'° ↓'+Math.round(s.days[0].min)+'°<br>'
+   +'体感'+Math.round(s.cur.feel)+'° 湿度'+Math.round(s.cur.hum)+'%</div></div><div class="wx-days">';
+  for(var i=1;i<=3&&i<s.days.length;i++){
+    var d=s.days[i],dd=new Date(d.date+"T00:00:00"),w=wx(d.code);
+    h+='<div class="wx-day">周'+WD[dd.getDay()]+'<i>'+w[1]+'</i><b>'+Math.round(d.max)+'°</b> '+Math.round(d.min)+'°</div>';
+  }
+  $("wx").innerHTML=h+"</div>";
+}
+function fetchJson(url,ms){
+  return new Promise(function(res,rej){
+    var done=false,t=setTimeout(function(){if(!done){done=true;rej(new Error("timeout"))}},ms||12000);
+    fetch(url).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+      .then(function(j){if(!done){done=true;clearTimeout(t);res(j)}})
+      .catch(function(e){if(!done){done=true;clearTimeout(t);rej(e)}});
+  });
+}
+function loadWx(lat,lon){
+  var u="https://api.open-meteo.com/v1/forecast?latitude="+lat+"&longitude="+lon
+   +"&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m"
+   +"&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=4";
+  return fetchJson(u).then(function(j){
+    var d=j.daily,days=[];
+    for(var i=0;i<d.time.length;i++)days.push({date:d.time[i],code:d.weather_code[i],max:d.temperature_2m_max[i],min:d.temperature_2m_min[i]});
+    wxState={lat:lat,lon:lon,city:(wxState&&wxState.city)||"",cur:{t:j.current.temperature_2m,feel:j.current.apparent_temperature,hum:j.current.relative_humidity_2m,code:j.current.weather_code,wind:j.current.wind_speed_10m},days:days,at:Date.now()};
+    save("dc_wx",wxState);renderWx();
+    return fetchJson("https://api.bigdatacloud.net/data/reverse-geocode-client?latitude="+lat+"&longitude="+lon+"&localityLanguage=zh",8000)
+      .then(function(g){var c=g.city||g.locality||g.principalSubdivision||"";if(c&&wxState){wxState.city=c.replace(/市$/,"");save("dc_wx",wxState);renderWx()}})
+      .catch(function(){});
+  });
+}
+function locate(){
+  if(!navigator.geolocation){wxMsg("此浏览器不支持定位");return}
+  navigator.geolocation.getCurrentPosition(function(p){
+    loadWx(p.coords.latitude.toFixed(3),p.coords.longitude.toFixed(3)).catch(function(){if(!wxState)wxMsg("天气获取失败，点这里重试")});
+  },function(){
+    if(wxState&&wxState.lat){loadWx(wxState.lat,wxState.lon).catch(function(){})}
+    else wxMsg("需要定位权限，点这里重试");
+  },{timeout:15000,maximumAge:1800000,enableHighAccuracy:false});
+}
+$("wx").addEventListener("click",locate);
+if(wxState)renderWx();
+locate();
+setInterval(function(){
+  if(wxState&&wxState.lat)loadWx(wxState.lat,wxState.lon).catch(function(){});else locate();
+},20*60*1000);
+
+/* ---------- 待办 ---------- */
+var todos=load("dc_todos",[
+  {id:1,t:"点左边圆圈：完成待办",d:false},
+  {id:2,t:"点右边 × 删除，下面输入框新增",d:false},
+  {id:3,t:"点底部额度卡片：修改用量",d:false}
+]);
+function renderTodos(){
+  var h="",left=0;
+  todos.forEach(function(x){
+    if(!x.d)left++;
+    h+='<li class="'+(x.d?"done":"")+'" data-id="'+x.id+'"><button class="ck" data-a="t">✓</button><span class="tx"></span><button class="rm" data-a="x">×</button></li>';
+  });
+  $("list").innerHTML=h||'<li class="empty">没有待办，真轻松</li>';
+  var lis=$("list").querySelectorAll("li[data-id]");
+  for(var i=0;i<lis.length;i++)lis[i].querySelector(".tx").textContent=todos[i].t;
+  $("todoCount").textContent=left?("剩 "+left+" 项"):"";
+}
+$("list").addEventListener("click",function(e){
+  var b=e.target.closest("button");if(!b)return;
+  var li=b.closest("li"),id=+li.getAttribute("data-id");
+  if(b.getAttribute("data-a")==="t"){todos.forEach(function(x){if(x.id===id)x.d=!x.d})}
+  else{todos=todos.filter(function(x){return x.id!==id})}
+  save("dc_todos",todos);renderTodos();
+});
+$("addForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var v=$("addInput").value.replace(/^\s+|\s+$/g,"");if(!v)return;
+  todos.push({id:Date.now(),t:v,d:false});
+  $("addInput").value="";save("dc_todos",todos);renderTodos();
+  $("list").scrollTop=1e5;
+});
+renderTodos();
+
+/* ---------- AI 额度（手动） ---------- */
+var AI=load("dc_ai",[
+  {id:"claude",name:"Claude",color:"#e08a5e",used:35,note:"点此填写重置时间",sample:true},
+  {id:"gpt",name:"ChatGPT",color:"#74c7a5",used:20,note:"点此填写重置时间",sample:true},
+  {id:"doubao",name:"豆包",color:"#7aa7e8",used:10,note:"点此填写重置时间",sample:true}
+]);
+function renderAI(){
+  var h="";
+  AI.forEach(function(a,i){
+    var left=Math.max(0,100-a.used),cls=left<10?"low":left<30?"mid":"";
+    h+='<div class="card q" data-i="'+i+'"><div class="q-top"><div class="q-name"><i style="background:'+a.color+'"></i>'+a.name+(a.sample?" <em>示例</em>":"")+'</div>'
+     +'<div class="q-left">'+left+'<small>% 剩余</small></div></div>'
+     +'<div class="bar"><span class="'+cls+'" style="width:'+left+'%"></span></div>'
+     +'<div class="q-note"></div></div>';
+  });
+  $("ai").innerHTML=h;
+  var ns=$("ai").querySelectorAll(".q-note");
+  for(var i=0;i<ns.length;i++)ns[i].textContent=AI[i].note||"";
+}
+var editing=-1;
+$("ai").addEventListener("click",function(e){
+  var c=e.target.closest(".q");if(!c)return;
+  editing=+c.getAttribute("data-i");var a=AI[editing];
+  $("shTitle").textContent=a.name+" 用量";
+  $("shRange").value=a.used;$("shVal").textContent=a.used+"%";
+  $("shNote").value=a.sample?"":(a.note||"");
+  $("mask").hidden=false;
+});
+$("shRange").addEventListener("input",function(){$("shVal").textContent=this.value+"%"});
+$("shCancel").addEventListener("click",function(){$("mask").hidden=true});
+$("mask").addEventListener("click",function(e){if(e.target===this)this.hidden=true});
+$("sheet").addEventListener("submit",function(e){
+  e.preventDefault();
+  var a=AI[editing];a.used=+$("shRange").value;a.note=$("shNote").value||"";a.sample=false;
+  save("dc_ai",AI);renderAI();$("mask").hidden=true;
+});
+renderAI();
+
+/* ---------- 防烧屏 / 常亮 ---------- */
+var shifts=[[0,0],[3,2],[-3,3],[2,-3],[-2,-2]],si=0;
+setInterval(function(){si=(si+1)%shifts.length;$("app").style.transform="translate("+shifts[si][0]+"px,"+shifts[si][1]+"px)"},120000);
+function keepAwake(){try{if(navigator.wakeLock)navigator.wakeLock.request("screen").catch(function(){})}catch(e){}}
+document.addEventListener("visibilitychange",function(){if(!document.hidden){keepAwake();tick();locate()}});
+keepAwake();
+document.addEventListener("gesturestart",function(e){e.preventDefault()});
+
+tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
